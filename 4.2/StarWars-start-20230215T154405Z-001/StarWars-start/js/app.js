@@ -4,7 +4,7 @@ const priceTag = document.querySelector('#filter-price');
 const priceMinTag = document.querySelector('#filter-min-price');
 const btnFiltrarTag = document.getElementById("btn-filter");
 
-let figuresList = [];
+let figuresList = [];           //Se envian los datos del JSON a esta variable para que sea global
 
 // TODO:Petició asíncona per recuperar les figures
 function getFigures() {
@@ -50,18 +50,18 @@ function setFavourites() {
 
 // TODO: Filtra les figures per preu i les ordena
 function filterFigures() {
-    let list = figuresList
-        .filter(e => (e.price >= priceMinTag.value && e.price <= priceTag.value))
-        .sort((a, b) => {
+    let list = figuresList                                                                     //List pilla toda la informacion de la variable global
+        .filter(e => (e.price >= priceMinTag.value && e.price <= priceTag.value))              //Se crea un filtro de minimo y maximo
+        .sort((a, b) => {                                                                      //Se crea una funcion para ordenarlos alfabeticamente
             // Ordena de major a menor pel nom
             if (a.name > b.name) return 1;
             if (a.name < b.name) return -1;
             return 0;
         });
 
-    if (list.length === 0)
+    if (list.length === 0)                                                                      //Si con el filtro no hay ninguna figuro osea que el total de figuras sea 0 te enviara este aviso
         listTag.innerHTML = "No hay figuras que coincidan con el filtro";
-    else
+    else                                                                                        //Si hay con la funcion de printFigures las enseñaremos en pantalla
         printFigures(list);
 }
 /*
