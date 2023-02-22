@@ -207,7 +207,7 @@ function ex1Filter(products){
     }
     return productExpensive;
 }
-//console.log("Ex.1:", ex1Filter(productsList));
+//console.log("Ex.1:", ex1Filter(productsList)); 
 
 // Funció que retorni el producte més barat
 function ex2Filter(products){
