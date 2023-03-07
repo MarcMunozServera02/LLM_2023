@@ -1,0 +1,59 @@
+{
+    "title":"Strager things",
+    "syspnosis":"....",
+    "seasons":[
+        {
+            "number":1,
+            "episodes":[
+                    {
+                        "number":1,
+                        "title":"La desaparición de Will Byers",
+                        "duration":56,
+                        "image":"episode-1.jpg",
+                        "description":"Cuando vuelve en bici a su casa, Will ve algo horroroso. Cerca de allí, un siniestro secreto acecha en las profundidades de un laboratorio estatal."    
+                    },
+                    {
+                        "number":2,
+                        "title":"La desaparición de Will Byers 2",
+                        "duration":52,
+                        "image":"episode-2.jpg",
+                        "description":"2 Cuando vuelve en bici a su casa, Will ve algo horroroso. Cerca de allí, un siniestro secreto acecha en las profundidades de un laboratorio estatal."    
+                    },
+                    {
+                        "number":3,
+                        "title":"La desaparición de Will Byers 3",
+                        "duration":62,
+                        "image":"episode-3.jpg",
+                        "description":"3 Cuando vuelve en bici a su casa, Will ve algo horroroso. Cerca de allí, un siniestro secreto acecha en las profundidades de un laboratorio estatal."    
+                    }
+                ]
+        },
+        {
+            "number":2,
+            "episodes":[
+            {
+                "number":1,
+                "title":"1.1La desaparición de Will Byers",
+                "duration":64,
+                "image":"episode-2.jpg",
+                "description":"Cuando vuelve en bici a su casa, Will ve algo horroroso. Cerca de allí, un siniestro secreto acecha en las profundidades de un laboratorio estatal."    
+            },
+            {
+                "number":2,
+                "title":"2.2La desaparición de Will Byers 2",
+                "duration":52,
+                "image":"episode-2.jpg",
+                "description":"2 Cuando vuelve en bici a su casa, Will ve algo horroroso. Cerca de allí, un siniestro secreto acecha en las profundidades de un laboratorio estatal."    
+            },
+            {
+                "number":3,
+                "title":"2.3La desaparición de Will Byers 3",
+                "duration":32,
+                "image":"episode-2.jpg",
+                "description":"3 Cuando vuelve en bici a su casa, Will ve algo horroroso. Cerca de allí, un siniestro secreto acecha en las profundidades de un laboratorio estatal."    
+            }
+        ]
+        }
+
+    ]
+}

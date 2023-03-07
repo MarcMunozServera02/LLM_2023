@@ -1,4 +1,6 @@
 const gridSimilars = document.querySelector('.grid-similares');
+let seasonsJSON = [];
+let currentSeason = 1;
 
 const getSeries = () => {
     return    fetch("./data/series.json")
@@ -103,10 +105,79 @@ if(serie.stars){
                     </article>
     
     `
+};
+
+
+const getSeasons = () => {
+    fetch("./data/seasonsST.json")
+    .then(res => res.json())
+    .then(data => {
+        console.log(data.seasons);
+        seasonsJSON = data.seasons;
+        renderSeasons(seasonsJSON);
+    })
+    
 }
+
+const renderSeasons = (list) => {
+    const currentSeasonStorage = localStorage.getItem("currentSeason")
+    if(currentSeasonStorage){
+        currentSeason=parseInt(currentSeasonStorage, 10)
+    }
+    const seasonsContainer = document.querySelector('#nav-temporada');
+    seasonsContainer.innerHTML = "";
+    for (let i = 0; i < seasonsJSON.length; i++){
+        let numberSeason = i+1;
+        seasonsContainer.innerHTML+= `
+        <a href="#" 
+        id ="season-${numberSeason}"
+        onclick="showEpisodes(${numberSeason})"
+        class="${currentSeason===numberSeason?"active":""}">
+        Temporada ${numberSeason}</a>
+
+        `;
+    }
+
+    showEpisodes(currentSeason)
+
+
+}
+const showEpisodes = (numberSeason) => {
+    currentSeason=numberSeason;
+    localStorage.setItem("currentSeason", currentSeason);
+    document.querySelector('#nav-temporada .active').classList.remove("active");
+    document.querySelector(`#season-${currentSeason}`).classList.add("active");
+
+
+    const episodesContainer = document.querySelector(".episodes")
+    episodesContainer.innerHTML = "";
+    const episodes = seasonsJSON.find(season=>season.number===currentSeason).episodes
+    episodes.forEach(e => {
+        episodesContainer.innerHTML+=` 
+        <article class="item-episode">
+        <div class="number">${e.number}</div>
+        <div class="play-episode">
+            <img src="img/${e.image}" alt="">
+            <div class="play-episode-icon"></div>
+        </div>
+        <div class="desc">
+            <div class="container-title">
+                <h3>Capítulo ${e.number}: ${e.title}</h3>
+                <div class="duration">${e.duration} min</div>
+            </div>
+            <p>${e.description}</p>
+        </div>
+    </article>`
+        
+    });
+    
+}
+
+
 
 function init () {
     getSeries();
+    getSeasons();
 }
 
 init()
