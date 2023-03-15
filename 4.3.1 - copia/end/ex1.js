@@ -231,7 +231,7 @@ function ex3Filter(products){
     }
     return newProducts;
 }
-//console.log("Ex.3:", ex3Filter(productsList));
+console.log("Ex.3:", ex3Filter(productsList));
 
 
 // Funció que retorni els productes entre 500 i 600 euros de la categoria “COMPUTER” o “LAPTOP”.
@@ -318,7 +318,7 @@ function ex9Filter(products){
     }
     return arrayProducts;
 }
-console.log("Ex.9:", ex9Filter(productsList));
+//console.log("Ex.9:", ex9Filter(productsList));
 
 // Funció que retorni verdader o false si tots els productes es troben en stock i preu superior a 0.
 function ex10Filter(products){    
@@ -353,7 +353,7 @@ function ex12Filter(products){
     // Tornam objecte buit
     return {};
 }
-console.log("Ex.12:", ex12Filter(productsList));
+//console.log("Ex.12:", ex12Filter(productsList));
 
 // Funció que torni els ordinadors o portàtils amb un descompte superior o igual a 50%  i afegint una propietat amb el seu preu de descompte.
 function ex13Filter(products){
@@ -369,7 +369,7 @@ function ex13Filter(products){
     }
     return arrayProducts;
 }
-console.log("Ex.13:", ex13Filter(productsList));
+//console.log("Ex.13:", ex13Filter(productsList));
 
 // Funció que retorni els ordinadors diferents a la marca “HP”, en stock i que sense camp oferta.
 function ex14Filter(products){
@@ -381,7 +381,7 @@ function ex14Filter(products){
     }
     return arrayProducts;
 }
-console.log("Ex.14:", ex14Filter(productsList));
+//console.log("Ex.14:", ex14Filter(productsList));
 
 // Funció que retorni el producte amb el codi/id 18, però només els camps id, name i price.
 function ex15Filter(products){
@@ -398,4 +398,4 @@ function ex15Filter(products){
     }
     return product;
 }
-console.log("Ex.15:", ex15Filter(productsList));
+//console.log("Ex.15:", ex15Filter(productsList));

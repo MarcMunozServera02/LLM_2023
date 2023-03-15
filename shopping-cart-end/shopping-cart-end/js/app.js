@@ -80,7 +80,7 @@ function pintarCursos(listaCursos){
           <img src="img/curso${curso.id}.jpg" class="imagen-curso u-full-width">
           <div class="info-card">
               <h4>${curso.title}</h4>
-              <p class="profesor">${curso.teacher}</p>
+              <p class="profesor">capacidad de bateria ${curso.teacher}</p>
               <img src="img/estrellas.png">
               <p class="precio">${curso.price}€ <span class="u-pull-right ">${curso.priceOffer}€</span></p>
               <a href="#" class="u-full-width button-primary button input agregar-carrito"
