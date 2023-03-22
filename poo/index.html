@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        article{
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            padding: 0.3rem;
+            text-align: center;
+            width: 200px;
+        }
+        .price{
+            font-size: 1.1rem;
+            color:rgb(119, 13, 13);
+        }
+        #comic-container{
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap:1rem;
+        }
+        
+    </style>
+    <script defer type="module" src="./app.js"> </script>
+</head>
+<body>
+    <div id="comic-container"></div>
+  
+</body>
+</html>
